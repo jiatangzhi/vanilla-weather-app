@@ -89,13 +89,13 @@ li {
   font-weight: 700;
   color: rgb(32, 110, 45);
 }
-/* .separate {
+.separate {
   font-size: 20px;
   font-weight: 400;
   position: relative;
   line-height: 24px;
   top: -34px;
-} */
+}
 
 .weather-box {
   border: 2px solid rgba(129, 214, 193, 0.555);

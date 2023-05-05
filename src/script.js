@@ -38,8 +38,10 @@ function displayWeatherCondition(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#overview-icon");
-  
-  temperatureElement.innerHTML = Math.round(response.data.name);
+
+  let celciusTemperature = response.data.main.temp;
+   
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -64,8 +66,21 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celciusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
 
 search("london");
 
@@ -115,14 +130,7 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-// let cityElement = document.querySelector("#city");
-// let cityInput =
-// if (cityInput.value) {
-//   cityElement.innerHTML = `${cityInput.value}`;
-// } else {
-//   cityInput.innerHTML = null;
-//   alert("Please type a city");
-// }
+
 
 // function convertToCelsius(event) {
 //   event.preventDefault();
@@ -136,12 +144,8 @@ function getCurrentLocation(event) {
 //   temperatureElement.innerHTML = 66;
 // }
 
-// search engine
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
 
-let currentButton = document.querySelector("#current-location-button");
-currentButton.addEventListener("click", getCurrentLocation);
+
 
 // get sunrise & sunset
 // let sunriseElement = document.querySelector("#sunrise");
