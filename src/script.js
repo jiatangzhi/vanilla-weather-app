@@ -15,9 +15,10 @@ function formatDate(timestamp) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"];
+    "Saturday",
+  ];
   let day = days[date.getDay()];
-  return `Last update: ${day} ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function displayWeatherCondition(response) {
@@ -37,7 +38,7 @@ function displayWeatherCondition(response) {
 
 let apiKey = "2c93bb8c539579593628a1f398cf1b65";
 let city = "London";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayWeatherCondition);
 
@@ -75,7 +76,6 @@ axios.get(apiUrl).then(displayWeatherCondition);
 //   }
 //   return `${hours}:${mins}`;
 // }
-
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -115,7 +115,6 @@ function getCurrentLocation(event) {
 //   temperatureElement.innerHTML = 66;
 // }
 
-
 // search engine
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
@@ -134,4 +133,3 @@ currentButton.addEventListener("click", getCurrentLocation);
 
 // let fahrenheitLink = document.querySelector("#fahrenheit-link");
 // fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
