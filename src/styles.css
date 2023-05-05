@@ -107,19 +107,19 @@ h5 {
   text-align: center;
 }
 .weather-forecast {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
   border: 2px solid rgba(129, 214, 193, 0.555);
   border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
   box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
 }
-.weather-forcast-day {
+.weather-forecast-day {
   padding: 10px;
   margin: 10px;
 }
 .weather-forecast-temperature {
   font-family: "Open Sans", sans-serif;
-  padding: 10px;
   margin: 10px;
 }
 .weather-forecast-min {
