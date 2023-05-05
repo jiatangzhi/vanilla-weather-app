@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 100%;
+  size: 1em;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: #1964d6;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+  max-width: 45%;
+  border: transparent;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+li:hover {
+  background-color: #fefbef;
+}
+
+button {
+  color: #fff;
+  background-color: #1964d6;
+  padding: 1%;
+  border: solid #1964d6;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #1964d6;
+  background-color: #fff;
+}
