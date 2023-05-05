@@ -28,13 +28,47 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#weather-description").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].description;
+  //   document.querySelector("#sunset").innerHTML =
+  //   response.data.sys.sunset;
+  //   document.querySelector("#sunrise").innerHTML =
+  //   response.data.sys.sunrise;
 }
+
+// function formattedSunrise(props) {
+//   let date = new Date(props.time);
+
+//   let hours = date.getHours();
+//   if (hours < 10) {
+//     hours = `0${hours}`;
+//   }
+
+//   let mins = date.getMinutes();
+//   if (mins < 10) {
+//     mins = `0${mins}`;
+//   }
+//   return `${hours}:${mins}`;
+// }
+
+// function formattedSunset(props) {
+//   let date = new Date(props.time);
+
+//   let hours = date.getHours();
+//   if (hours < 10) {
+//     hours = `0${hours}`;
+//   }
+
+//   let mins = date.getMinutes();
+//   if (mins < 10) {
+//     mins = `0${mins}`;
+//   }
+//   return `${hours}:${mins}`;
+// }
 
 function searchCity(city) {
   let apiKey = "2c93bb8c539579593628a1f398cf1b65";
@@ -91,6 +125,11 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentButton = document.querySelector("#current-location-button");
 currentButton.addEventListener("click", getCurrentLocation);
+
+// get sunrise & sunset
+// let sunriseElement = document.querySelector("#sunrise");
+// let sunriseTime = new Date();
+// sunriseElement.innerHTML = formattedSunrise(sunriseTime);
 
 // change temperature format
 // let celsiusLink = document.querySelector("#celcius-link");
