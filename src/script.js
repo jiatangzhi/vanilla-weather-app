@@ -35,15 +35,29 @@ function displayWeatherCondition(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute("src"), `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute("alt". response.data.weather[0].description);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "2c93bb8c539579593628a1f398cf1b65";
-let city = "London";
-let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "2c93bb8c539579593628a1f398cf1b65";
+  let city = "London";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
 
-axios.get(apiUrl).then(displayWeatherCondition);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+search("london");
 
 //   document.querySelector("#sunset").innerHTML =
 //   response.data.sys.sunset;
@@ -79,16 +93,6 @@ axios.get(apiUrl).then(displayWeatherCondition);
 //   }
 //   return `${hours}:${mins}`;
 // }
-function searchCity(city) {
-  axios.get(apiUrl).then(displayWeatherCondition);
-}
-searchCity("london");
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  searchCity(city);
-}
 
 function searchLocation(position) {
   let apiKey = "2c93bb8c539579593628a1f398cf1b65";
