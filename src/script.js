@@ -1,49 +1,54 @@
-function getTime(date) {
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+// function getTime(date) {
+//   let hours = date.getHours();
+//   if (hours < 10) {
+//     hours = `0${hours}`;
+//   }
+//   let minutes = date.getMinutes();
+//   if (minutes < 10) {
+//     minutes = `0${minutes}`;
+//   }
 
-  let dayIndex = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[dayIndex];
+//   let dayIndex = date.getDay();
+//   let days = [
+//     "Sunday",
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
+//   ];
+//   let day = days[dayIndex];
 
-  return `Last update: ${day} ${hours}:${minutes}`;
-}
+//   return `Last update: ${day} ${hours}:${minutes}`;
+// }
+
+
 
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
-  let descriptionElement =  document.querySelector("#description")
+  let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-
+  let dateElement = document.querySelector("#date");
   temperatureElement.innerHTML = response.data.name;
   cityElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round( response.data.wind.speed);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
+
+let apiKey = "2c93bb8c539579593628a1f398cf1b65";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayWeatherCondition);
 
-  //   document.querySelector("#sunset").innerHTML =
-  //   response.data.sys.sunset;
-  //   document.querySelector("#sunrise").innerHTML =
-  //   response.data.sys.sunrise;
-
+//   document.querySelector("#sunset").innerHTML =
+//   response.data.sys.sunset;
+//   document.querySelector("#sunrise").innerHTML =
+//   response.data.sys.sunrise;
 
 // function formattedSunrise(props) {
 //   let date = new Date(props.time);
@@ -76,8 +81,6 @@ axios.get(apiUrl).then(displayWeatherCondition);
 // }
 
 function searchCity(city) {
-  let apiKey = "2c93bb8c539579593628a1f398cf1b65";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -120,7 +123,7 @@ function getCurrentLocation(event) {
 // }
 
 // get date & time
-let dateElement = document.querySelector("#current-time");
+
 let currentTime = new Date();
 dateElement.innerHTML = getTime(currentTime);
 
