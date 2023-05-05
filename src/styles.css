@@ -1,27 +1,16 @@
 .body {
   font-family: "Mulish", sans-serif;
-  background: linear-gradient(
-    180deg,
-    #2da198 10%,
-    rgb(108, 194, 86) 50%,
-    rgb(41, 170, 159) 90%
-  );
 }
-.weather {
+.weather-app-wrapper {
   max-width: 700px;
-  display: block;
-  margin: 0 auto;
-}
-.container {
   padding: 10px;
-  margin: 20px auto 30px;
+  margin: 20px auto;
   /* background: rgba(252, 252, 252, 0.6); */
   background: rgba(25, 157, 161, 0.2);
   border-radius: 10px;
   color: rgb(33, 139, 134);
   box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
 }
-
 .search-form {
   background: rgba(80, 156, 144, 0.466);
   padding: 20px;
@@ -100,12 +89,15 @@ li {
   font-weight: 700;
   color: rgb(32, 110, 45);
 }
-.separate {
+/* .separate {
   font-size: 20px;
   font-weight: 400;
   position: relative;
   line-height: 24px;
   top: -34px;
+} */
+.weather-boxes {
+  margin-top: 10px;
 }
 .weather-box {
   border: 2px solid rgba(129, 214, 193, 0.555);
