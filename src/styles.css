@@ -96,14 +96,12 @@ li {
   line-height: 24px;
   top: -34px;
 } */
-.weather-boxes {
-  margin-top: 10px;
-}
+
 .weather-box {
   border: 2px solid rgba(129, 214, 193, 0.555);
   border-radius: 10px;
   padding: 20px;
-  margin: 10px;
+  margin: auto 10px;
   box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
 }
 .weather-icon {
