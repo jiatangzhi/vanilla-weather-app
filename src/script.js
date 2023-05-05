@@ -69,8 +69,19 @@ function handleSubmit(event) {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  // remove the active class in the celcius link
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+    celciusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
 let celciusTemperature = null;
@@ -81,6 +92,8 @@ form.addEventListener("submit", handleSubmit);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
+let celciusLink = document.querySelector("#fahrenheit-link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("london");
 
@@ -119,17 +132,17 @@ search("london");
 //   return `${hours}:${mins}`;
 // }
 
-function searchLocation(position) {
-  let apiKey = "2c93bb8c539579593628a1f398cf1b65";
-  let apiUrl = `http://api.openweathermap.org/geo/1.0/reverse??lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
-  axios.get(apiUrl).then(displayWeatherCondition);
-}
+// function searchLocation(position) {
+//   let apiKey = "2c93bb8c539579593628a1f398cf1b65";
+//   let apiUrl = `http://api.openweathermap.org/geo/1.0/reverse??lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+//   console.log(apiUrl);
+//   axios.get(apiUrl).then(displayWeatherCondition);
+// }
 
-function getCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
+// function getCurrentLocation(event) {
+//   event.preventDefault();
+//   navigator.geolocation.getCurrentPosition(searchLocation);
+// }
 
 
 // function convertToCelsius(event) {
