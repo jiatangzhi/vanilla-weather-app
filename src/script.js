@@ -84,7 +84,7 @@ celciusLink.addEventListener("click", displayCelciusTemperature);
 
 function search(city) {
   let apiKey = "2c93bb8c539579593628a1f398cf1b65";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
