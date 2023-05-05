@@ -1,11 +1,3 @@
-// function getTime(date) {
-//   
-
-//   
-
-//   
-// }
-
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -44,6 +36,7 @@ function displayWeatherCondition(response) {
 }
 
 let apiKey = "2c93bb8c539579593628a1f398cf1b65";
+let city = "London";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayWeatherCondition);
@@ -83,9 +76,6 @@ axios.get(apiUrl).then(displayWeatherCondition);
 //   return `${hours}:${mins}`;
 // }
 
-function searchCity(city) {
-  axios.get(apiUrl).then(displayWeatherCondition);
-}
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -125,10 +115,6 @@ function getCurrentLocation(event) {
 //   temperatureElement.innerHTML = 66;
 // }
 
-// get date & time
-
-let currentTime = new Date();
-dateElement.innerHTML = getTime(currentTime);
 
 // search engine
 let searchForm = document.querySelector("#search-form");
@@ -149,4 +135,3 @@ currentButton.addEventListener("click", getCurrentLocation);
 // let fahrenheitLink = document.querySelector("#fahrenheit-link");
 // fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-searchCity("london");
