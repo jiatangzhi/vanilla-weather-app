@@ -66,14 +66,14 @@ li {
   font-size: 50px;
   padding: 30px;
 }
-.overview-icon {
-  font-size: 50px;
-  font-weight: 400;
+.overview-icon img {
+  height: 64px;
+  width: 64px;
 }
-.weather-temp {
+.weather-temp strong {
   font-size: 60px;
+  line-height: 1;
   font-weight: 400;
-  line-height: 64px;
 }
 .units {
   font-size: 16px;
@@ -81,23 +81,15 @@ li {
   position: relative;
   top: -34px;
 }
-.units a {
-  font-size: 16px;
+.units .active {
   color: rgb(33, 139, 134);
+  cursor: default;
   text-decoration: none;
 }
-.unis a:hover {
+.units .active:hover {
   font-weight: 700;
   color: rgb(32, 110, 45);
 }
-/* .separate {
-  font-size: 20px;
-  font-weight: 400;
-  position: relative;
-  line-height: 24px;
-  top: -34px;
-} */
-
 .weather-box {
   border: 2px solid rgba(129, 214, 193, 0.555);
   border-radius: 10px;

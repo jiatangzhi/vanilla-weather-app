@@ -2,33 +2,33 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/styles.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:wght@300;400&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:wght@300;400&display=swap"
+    rel="stylesheet"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"
     ></script>
     <script
       src="https://kit.fontawesome.com/17814c1839.js"
       crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+      ></script>
+      <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+      <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
-
   <body>
     <div class="container text-center">
       <div class="weather-app-wrapper">
@@ -85,9 +85,9 @@
                         ><strong></strong
                       ></span>
                       <span class="units">
-                        <a href="#" id="celcius-link"> °C </a>|
+                        <a href="#" id="celcius-link" class="active"> °C</a> | 
                         <span>
-                          <a href="#" id="fahrenheit-link"> °F</a>
+                          <a href="#" id="fahrenheit-link">°F</a>
                         </span>
                       </span>
                     </div>
@@ -224,7 +224,7 @@
           </div>
         </div>
       </div>
-      <footer>
+      <footer class=" mb-5">
         This project was coded by
         <a href="http://www.jxtangzhi.com/" target="_blank" class="links"
           >Jia Tang Zhi</a
