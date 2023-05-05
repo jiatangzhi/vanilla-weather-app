@@ -1,4 +1,5 @@
 .body {
+  font-family: "Mulish", sans-serif;
   background: linear-gradient(
     180deg,
     #2da198 10%,
@@ -49,7 +50,6 @@
 }
 .overview {
   text-align: left;
-  font-family: "Mulish", sans-serif;
   margin: 10px;
   border: 2px solid rgba(129, 214, 193, 0.555);
   border-radius: 10px;
@@ -82,7 +82,6 @@ li {
   font-weight: 400;
 }
 .weather-temp {
-  font-family: "Mulish", sans-serif;
   font-size: 60px;
   font-weight: 400;
   line-height: 64px;
@@ -113,7 +112,6 @@ li {
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
-  margin-top: 10px;
   box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
 }
 .weather-icon {
@@ -149,7 +147,6 @@ h5 {
 }
 footer {
   text-align: center;
-  font-family: "Mulish", sans-serif;
   font-size: 13px;
   line-height: 2px;
   margin-bottom: 10px;
