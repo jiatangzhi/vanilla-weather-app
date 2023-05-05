@@ -53,6 +53,17 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+function search(city) {
+  let apiKey = "2c93bb8c539579593628a1f398cf1b65";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
@@ -65,9 +76,9 @@ function displayFahrenheitTemperature(event) {
 
 function displayCelciusTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
   fahrenheitLink.classList.remove("active");
   celciusLink.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
@@ -79,20 +90,9 @@ form.addEventListener("submit", handleSubmit);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celciusLink = document.querySelector("#fahrenheit-link");
+let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
-function search(city) {
-  let apiKey = "2c93bb8c539579593628a1f398cf1b65";
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeatherCondition);
-}
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
-}
 
 search("london");
 
