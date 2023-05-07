@@ -9,7 +9,7 @@
   background: rgba(25, 157, 161, 0.2);
   border-radius: 10px;
   color: rgb(33, 139, 134);
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
+  box-shadow: 15px -15px 10px 0 rgba(31, 135, 118, 0.6);
 }
 .search-form {
   background: rgba(80, 156, 144, 0.466);
@@ -17,12 +17,12 @@
   margin: 10px;
   border: 10px;
   border-radius: 10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(31, 131, 135, 0.37);
 }
 .btn-search {
   color: #fff;
   background: rgb(33, 139, 134);
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(31, 131, 135, 0.5);
   transition: all 150ms ease-in-out;
 }
 .btn-search:hover {
@@ -37,7 +37,7 @@
   margin: 10px;
   border: 2px solid rgba(129, 214, 193, 0.555);
   border-radius: 10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(31, 131, 135, 0.37);
 }
 h1 {
   padding-left: 20px;
@@ -99,7 +99,7 @@ a {
   border-radius: 10px;
   padding: 20px;
   margin: auto 10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(31, 131, 135, 0.37);
 }
 .weather-icon {
   font-size: 20px;
@@ -116,7 +116,7 @@ h5 {
   text-align: center;
   border: 2px solid rgba(129, 214, 193, 0.555);
   border-radius: 10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(31, 131, 135, 0.37);
 }
 .weather-forecast-date {
   font-size: 16px;
