@@ -1,5 +1,5 @@
+//calculate the date & time
 function formatDate(timestamp) {
-  //calculate the date
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
@@ -33,6 +33,7 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+// injected HTML to display the forecast for each day
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
@@ -68,6 +69,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+//call forecast API
 function getForecast(coordinates) {
   let apiKey = "a95c2c6739994ba4903e007ee817e7d1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
@@ -146,16 +148,16 @@ function displayCelsiusTemp(event) {
   feelsLikeElement.innerHTML = Math.round(celsiusTemp);
 }
 
+//change dark-light theme
 function changeTheme() {
   let body = document.querySelector("body");
+  body.classList.toggle("dark");
 
-  //body.classList.toggle("dark");
-
-  if (body.classList.contains("dark")) {
-    body.classList.remove("dark");
-  } else {
-    body.classList.add("dark");
-  }
+  // if (body.classList.contains("dark")) {
+  //   body.classList.remove("dark");
+  // } else {
+  //   body.classList.add("dark");
+  // }
 }
 
 let celsiusTemp = null;
