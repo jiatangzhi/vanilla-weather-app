@@ -44,6 +44,7 @@ h1 {
   margin: 10px;
   position: relative;
   top: 7px;
+  font-weight: 400;
 }
 li {
   list-style-type: none;
@@ -56,30 +57,41 @@ li {
   font-size: 50px;
   padding: 30px;
 }
-.overview-icon img {
-  height: 64px;
-  width: 64px;
+.overview-icon {
+  font-size: 50px;
+  font-weight: 400;
+  margin: auto 0;
 }
 .weather-temp strong {
   font-size: 60px;
   line-height: 1;
   font-weight: 400;
 }
-.unit {
+/* .unit {
   font-size: 16px;
   font-weight: 400;
   position: relative;
   top: -34px;
-}
-/* .units .active {
-  color: rgb(33, 139, 134);
-  cursor: default;
-  text-decoration: none;
-}
-.units .active:hover {
-  font-weight: 700;
-  color: rgb(32, 110, 45);
 } */
+.temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 1;
+}
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  cursor: default;
+}
+.active {
+  color: rgb(33, 139, 134);
+}
 .weather-box {
   border: 2px solid rgba(129, 214, 193, 0.555);
   border-radius: 10px;
@@ -91,7 +103,7 @@ li {
   font-size: 20px;
 }
 .box-icon {
-  font-size: 50px;
+  font-size: 45px;
 }
 h5 {
   text-align: center;
