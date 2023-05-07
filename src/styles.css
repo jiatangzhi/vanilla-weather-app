@@ -39,11 +39,6 @@
   border-radius: 10px;
   box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
 }
-.overview-icon {
-  font-size: 50px;
-  font-weight: 400;
-  margin: auto 0;
-}
 h1 {
   padding-left: 20px;
   margin: 10px;
@@ -101,8 +96,7 @@ li {
 h5 {
   text-align: center;
 }
-
-/* .weather-forecast {
+.weather-forecast {
   padding: 20px;
   margin: 10px;
   text-align: center;
@@ -110,20 +104,18 @@ h5 {
   border-radius: 10px;
   box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
 }
-.weather-forecast-day {
-  padding: 10px;
-  margin: 10px;
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
 }
-.weather-forecast-temperature {
-  font-family: "Open Sans", sans-serif;
-  margin: 10px;
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
-.weather-forecast-min {
-  color: rgb(0, 119, 255);
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
-.weather-forecast-max {
-  color: rgb(255, 0, 0);
-} */
 footer {
   text-align: center;
   font-size: 13px;
