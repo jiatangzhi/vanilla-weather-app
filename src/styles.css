@@ -19,18 +19,13 @@
   border-radius: 10px;
   box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
 }
-.btn-info {
-  color: #fff;
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
-}
 .btn-search {
   color: #fff;
   background: rgb(33, 139, 134);
   box-shadow: 0 8px 32px 0 rgba(31, 135, 40, 0.37);
   transition: all 150ms ease-in-out;
 }
-.btn-search:hover,
-.btn-success:hover {
+.btn-search:hover {
   font-weight: 600;
   color: #fff;
   background: rgba(80, 170, 125, 0.8);
@@ -75,13 +70,13 @@ li {
   line-height: 1;
   font-weight: 400;
 }
-.units {
+.unit {
   font-size: 16px;
   font-weight: 400;
   position: relative;
   top: -34px;
 }
-.units .active {
+/* .units .active {
   color: rgb(33, 139, 134);
   cursor: default;
   text-decoration: none;
@@ -89,7 +84,7 @@ li {
 .units .active:hover {
   font-weight: 700;
   color: rgb(32, 110, 45);
-}
+} */
 .weather-box {
   border: 2px solid rgba(129, 214, 193, 0.555);
   border-radius: 10px;
@@ -106,7 +101,8 @@ li {
 h5 {
   text-align: center;
 }
-.weather-forecast {
+
+/* .weather-forecast {
   padding: 20px;
   margin: 10px;
   text-align: center;
@@ -127,7 +123,7 @@ h5 {
 }
 .weather-forecast-max {
   color: rgb(255, 0, 0);
-}
+} */
 footer {
   text-align: center;
   font-size: 13px;

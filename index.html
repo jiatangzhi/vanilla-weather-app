@@ -3,30 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-    crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:wght@300;400&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
     />
     <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
     ></script>
     <script
       src="https://kit.fontawesome.com/17814c1839.js"
       crossorigin="anonymous"
-      ></script>
-      <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 
-      <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
   <body>
@@ -35,7 +35,7 @@
         <div class="weather-app">
           <form class="search-form mb-3" id="search-form">
             <div class="row">
-              <div class="col-6">
+              <div class="col-9">
                 <input
                   type="search"
                   placeholder="Enter a city"
@@ -52,14 +52,6 @@
                   value="Search"
                 />
               </div>
-              <div class="col-3">
-                <button
-                  class="btn btn-success w-100"
-                  id="current-location-button"
-                >
-                  Current
-                </button>
-              </div>
             </div>
           </form>
 
@@ -70,26 +62,24 @@
                   <h1 class="mt-3" id="city ">London</h1>
                   <ul>
                     <li>Last update: <span id="date">Tuesday 13:35</span></li>
-                    <li id="description">Clear Sky</li>
+                    <li id="description">overcast clouds</li>
                   </ul>
                 </div>
 
                 <div class="col-7 overview-details">
                   <div class="row">
                     <div class="overview-icon col">
-                      <img id="overview-icon" alt="" />
+                      <img
+                        id="icon"
+                        src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                        alt=""
+                      />
                     </div>
 
                     <div class="weather-temp col">
-                      <span class="temperature" id="temperature"
-                        ><strong></strong
-                      ></span>
-                      <span class="units">
-                        <a href="#" id="celcius-link" class="active"> °C</a> | 
-                        <span>
-                          <a href="#" id="fahrenheit-link">°F</a>
-                        </span>
-                      </span>
+                      <span class="temperature" id="temperature">
+                        <strong>10</strong></span>
+                      <span class="unit"> °C</span>
                     </div>
                   </div>
                 </div>
@@ -103,7 +93,7 @@
                     <i class="fa-solid fa-droplet"></i>
                   </div>
                   <h5>Humidity</h5>
-                  <span id="humidity">8</span>%
+                  <span id="humidity">93</span>%
                 </div>
 
                 <div class="col weather-box mb-3">
@@ -111,7 +101,7 @@
                     <i class="fa-solid fa-wind"></i>
                   </div>
                   <h5>Wind</h5>
-                  <span id="wind">2</span> km/h
+                  <span id="wind">3</span> km/h
                 </div>
               </div>
 
@@ -141,7 +131,7 @@
                         <i class="fa-solid fa-moon"></i>
                       </div>
                       <h5>Sunset</h5>
-                      <span id="sunset">21:30</span>
+                      <span id="sunset">20:30</span>
                     </div>
                   </div>
                 </div>
@@ -149,14 +139,16 @@
             </div>
           </div>
 
-          <div class="weather-forecast">
+          <div class="weather-forecast" id="forecast"></div>
+
+          <!-- <div class="weather-forecast">
             <div class="row">
               <div class="col">
                 <div>
                   <div class="weather-forecast-day">Mon</div>
                   <div class="weather-icon col">
                     <i class="fa-solid fa-cloud"></i>
-                    <!-- <canvas width="36" height="36"></canvas> -->
+                    
                   </div>
                   <div class="weather-forecast-temperature mx=auto">
                     <span class="weather-forecast-min">13°</span>
@@ -170,7 +162,7 @@
                   <div class="weather-forecast-day">Tue</div>
                   <div class="weather-icon col">
                     <i class="fa-solid fa-cloud"></i>
-                    <!-- <canvas width="36" height="36"></canvas> -->
+                    
                   </div>
                   <div class="weather-forecast-temperature mx=auto">
                     <span class="weather-forecast-min">14°</span>
@@ -184,21 +176,21 @@
                   <div class="weather-forecast-day">Wed</div>
                   <div class="weather-icon col">
                     <i class="fa-solid fa-cloud"></i>
-                    <!-- <canvas width="36" height="36"></canvas> -->
+                    
                   </div>
                   <div class="weather-forecast-temperature mx=auto">
                     <span class="weather-forecast-min">8°</span>
                     <span class="weather-forecast-max">18°</span>
                   </div>
                 </div>
-              </div>
+              </div> 
 
               <div class="col">
                 <div>
                   <div class="weather-forecast-day">Thu</div>
                   <div class="weather-icon col">
                     <i class="fa-solid fa-cloud"></i>
-                    <!-- <canvas width="36" height="36"></canvas> -->
+                    
                   </div>
                   <div class="weather-forecast-temperature mx=auto">
                     <span class="weather-forecast-min">17°</span>
@@ -211,7 +203,7 @@
                 <div>
                   <div class="weather-forecast-day">Fri</div>
                   <div class="weather-icon col">
-                    <!-- <canvas width="36" height="36">  </canvas>-->
+                   
                     <i class="fa-solid fa-cloud"></i>
                   </div>
                   <div class="weather-forecast-temperature mx=auto">
@@ -221,10 +213,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
-      <footer class=" mb-5">
+      <footer class="mb-5">
         This project was coded by
         <a href="http://www.jxtangzhi.com/" target="_blank" class="links"
           >Jia Tang Zhi</a
