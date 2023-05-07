@@ -115,7 +115,6 @@ function displayWeatherCondition(response) {
   //displays Fahrenheit temperature
   function displayFahrenheitTemp(event) {
     event.preventDefault();
-    units = "imperial";
     
     let tempElement = document.querySelector("#temperature");
     let feelsLikeElement = document.querySelector("#feels-like");
@@ -131,8 +130,7 @@ function displayWeatherCondition(response) {
   //dispays Celsius temperature
   function displayCelsiusTemp(event) {
     event.preventDefault();
-    units = "metric";
-    
+  
     celsiusLink.classList.add("active");
     fahrenheitLink.classList.remove("active");
     

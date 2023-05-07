@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link
@@ -61,7 +61,7 @@
                 <div class="col-5 text-capitalize">
                   <h1 class="mt-3" id="city">London</h1>
                   <ul>
-                    <li>Last update: <span id="date">Tuesday 13:35</span></li>
+                    <li>Last update: <span id="date"></span></li>
                     <li id="description">overcast clouds</li>
                   </ul>
                 </div>
@@ -90,74 +90,74 @@
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="container-fluid text-center weather-boxes">
-              <div class="row">
-                <div class="col weather-box mb-3">
-                  <div class="box-icon">
-                    <i class="fa-solid fa-temperature-three-quarters"></i>
-                  </div>
-                  <h5>Feels like</h5>
-                  <span id="feels-like">0</span><span>° </span>
+          <div class="container-fluid text-center weather-boxes">
+            <div class="row">
+              <div class="col weather-box mb-3">
+                <div class="box-icon">
+                  <i class="fa-solid fa-temperature-three-quarters"></i>
                 </div>
-
-                <div class="col weather-box mb-3">
-                  <div class="box-icon">
-                    <i class="fa-solid fa-droplet"></i>
-                  </div>
-                  <h5>Humidity</h5>
-                  <span id="humidity">93</span>%
-                </div>
+                <h5>Feels like</h5>
+                <span id="feels-like">0</span><span>° </span>
               </div>
 
-              <div class="row">
-                <div class="col weather-box mb-3">
-                  <div class="box-icon">
-                    <i class="fa-solid fa-wind"></i>
-                  </div>
-                  <h5>Wind</h5>
-                  <span id="wind">3</span> m/s</span>
+              <div class="col weather-box mb-3">
+                <div class="box-icon">
+                  <i class="fa-solid fa-droplet"></i>
                 </div>
-                  <div class="col weather-box mb-3">
-                    <div class="col">
-                      <div class="box-icon">
-                        <i class="fa-solid fa-eye"></i>
-                      </div>
-                      <h5>Visibility</h5>
-                      10km
-                    </div>
-                  </div>
-                </div>
+                <h5>Humidity</h5>
+                <span id="humidity">93</span>%
               </div>
             </div>
 
-            <div class="weather-forecast" id="forecast"></div>
+            <div class="row">
+              <div class="col weather-box mb-3">
+                <div class="box-icon">
+                  <i class="fa-solid fa-wind"></i>
+                </div>
+                <h5>Wind</h5>
+                <span id="wind">3</span> m/s
+              </div>
+              <div class="col weather-box mb-3">
+                <div class="col">
+                  <div class="box-icon">
+                    <i class="fa-solid fa-eye"></i>
+                  </div>
+                  <h5>Visibility</h5>
+                  10km
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div class="weather-forecast" id="forecast"></div>
         </div>
       </div>
 
       <footer class="mb-5">
-        This project was coded by
-        <a href="http://www.jxtangzhi.com/" target="_blank" class="links"
-          >Jia Tang Zhi</a
-        >
-        and is open-sourced on
-        <a
-          href="https://github.com/jiatangzhi/vanilla-weather-app"
-          target="_blank"
-          class="links"
-          >Github</a
-        >
-        and hosted on
-        <a
-          href="https://main--fantastic-jalebi-26ed7b.netlify.app/"
-          target="_blank"
-          class="links"
-          >Netlify</a
-        >
+        <small
+          >This project was coded by
+          <a href="http://www.jxtangzhi.com/" target="_blank" class="links"
+            >Jia Tang Zhi</a
+          >
+          and is open-sourced on
+          <a
+            href="https://github.com/jiatangzhi/vanilla-weather-app"
+            target="_blank"
+            class="links"
+            >Github</a
+          >
+          and hosted on
+          <a
+            href="https://main--fantastic-jalebi-26ed7b.netlify.app/"
+            target="_blank"
+            class="links"
+            >Netlify</a
+          >
+        </small>
       </footer>
     </div>
-
     <script src="src/script.js"></script>
   </body>
 </html>
