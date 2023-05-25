@@ -1,3 +1,3 @@
 # vanilla-weather-app
 
-Visit the webiste on https://vanilla-weather-app-jiatz.netlify.app/
+Visit on [Weather App](https://vanilla-weather-app-jiatz.netlify.app/)
